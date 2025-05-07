@@ -1,0 +1,12 @@
+Device set to use cpu
+🔹 Original Sentence 1:
+ I am very appreciated the full support of the professor, for our Springer proceedings publication
+✅ Reconstructed:
+ "I am very appreciated the full support of the professor, for our Springer proceedings publication," he said. "I'm very grateful to the professor for his full support," he added. "It's been a great experience for me," the professor said. 'I've learned a lot 
+
+🔹 Original Sentence 2:
+ Anyway, I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation.
+✅ Reconstructed:
+ "I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation," he said. "I think the team is doing a good job," he added. "It's a good start to the new year," he continued. "We'll see."
+
+Process finished with exit code 0
