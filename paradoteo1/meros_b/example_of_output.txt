@@ -1,0 +1,17 @@
+Original Sentence 1:
+ Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives.
+Reconstructed (BART):
+ Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives. Today is ourDragon Boat Festival. To celebrate it, go to your local dragon boat club. Go to dragonboatclub.com to find out how to go.
+Reconstructed (T5):
+ Heute ist unser dragon boat festival, in unserer Chinese culture, um es mit allen schönen und sicheren in unseren Leben zu feiern.
+Reconstructed (PEGASUS):
+ All images are copyrighted. 
+
+Original Sentence 2:
+ During our final discuss, I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?
+Reconstructed (BART):
+ "I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?" he said. "During our final discuss, I told him of the new Submission — theOne we were Waiting for since last Autumn, and he said, 'Yes, that's what I was looking for
+Reconstructed (T5):
+ he was talking about the new submission — the one we were waiting since last autumn . During our final discuss, I told him about the new submission — but the updates were confusing as it not included the full feedback from reviewer or maybe editor?
+Reconstructed (PEGASUS):
+ On the final day of the conference, I had a chance to talk to my friend and fellow conference speaker, the novelist and writer David Shrigley.
