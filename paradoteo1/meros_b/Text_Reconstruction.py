@@ -1,32 +1,69 @@
-from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import spacy
 
-paraphraser_bart = pipeline("text2text-generation", model="facebook/bart-large-cnn")
-paraphraser_t5 = pipeline("text2text-generation", model="t5-small")
-paraphraser_pegasus = pipeline("text2text-generation", model="google/pegasus-xsum")
+# Κείμενα Εισόδου
+text1 = """
+Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives.
+Hope you too, to enjoy it as my deepest wishes.
+Thank your message to show our words to the doctor, as his next contract checking, to all of us.
+I got this message to see the approved message.
+In fact, I have received the message from the professor, to show me, this, a couple of days ago.
+I am very appreciated the full support of the professor, for our Springer proceedings publication.
+"""
 
-#Αρχικά κείμενα
-sentence_1 = "Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives."
-sentence_2 = "During our final discuss, I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?"
+text2 = """
+During our final discuss, I told him about the new submission — the one we were waiting since last autumn,
+but the updates was confusing as it not included the full feedback from reviewer or maybe editor?
+Anyway, I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation.
+We should be grateful, I mean all of us, for the acceptance and efforts until the Springer link came finally last week, I think.
+Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before he sending again.
+Because I didn’t see that part final yet, or maybe I missed, I apologize if so.
+Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future targets.
+"""
 
-#BART
-result_bart_1 = paraphraser_bart(sentence_1, max_length=60, do_sample=False)[0]['generated_text']
-result_bart_2 = paraphraser_bart(sentence_2, max_length=80, do_sample=False)[0]['generated_text']
 
-#T5
-result_t5_1 = paraphraser_t5(sentence_1, max_length=60, do_sample=False)[0]['generated_text']
-result_t5_2 = paraphraser_t5(sentence_2, max_length=80, do_sample=False)[0]['generated_text']
+nlp = spacy.load("en_core_web_sm")
+def split_sentences(text):
+    return [sent.text.strip() for sent in nlp(text).sents]
 
-#PEGASUS
-result_pegasus_1 = paraphraser_pegasus(sentence_1, max_length=60, do_sample=False)[0]['generated_text']
-result_pegasus_2 = paraphraser_pegasus(sentence_2, max_length=80, do_sample=False)[0]['generated_text']
+# Μοντέλο 1: Vamsi
+tok1 = AutoTokenizer.from_pretrained("Vamsi/T5_Paraphrase_Paws")
+mod1 = AutoModelForSeq2SeqLM.from_pretrained("Vamsi/T5_Paraphrase_Paws")
 
-# Εκτύπωση αποτελεσμάτων
-print("Original Sentence 1:\n", sentence_1)
-print("Reconstructed (BART):\n", result_bart_1)
-print("Reconstructed (T5):\n", result_t5_1)
-print("Reconstructed (PEGASUS):\n", result_pegasus_1, "\n")
+def paraphrase_1(sentence):
+    prompt = f"paraphrase: {sentence}"
+    inputs = tok1(prompt, return_tensors="pt", max_length=256, truncation=True, padding="max_length")
+    output = mod1.generate(inputs["input_ids"], attention_mask=inputs["attention_mask"], num_beams=5, max_length=256)
+    return tok1.decode(output[0], skip_special_tokens=True)
 
-print("Original Sentence 2:\n", sentence_2)
-print("Reconstructed (BART):\n", result_bart_2)
-print("Reconstructed (T5):\n", result_t5_2)
-print("Reconstructed (PEGASUS):\n", result_pegasus_2)
+# Μοντέλο 2: ramsrigouthamg
+tok2 = AutoTokenizer.from_pretrained("ramsrigouthamg/t5_paraphraser")
+mod2 = AutoModelForSeq2SeqLM.from_pretrained("ramsrigouthamg/t5_paraphraser")
+
+def paraphrase_2(sentence):
+    prompt = f"paraphrase: {sentence} </s>"
+    inputs = tok2(prompt, return_tensors="pt", max_length=256, truncation=True, padding="max_length")
+    output = mod2.generate(inputs["input_ids"], attention_mask=inputs["attention_mask"], num_beams=5, max_length=256)
+    return tok2.decode(output[0], skip_special_tokens=True)
+
+# Μοντέλο 3: BART
+tok3 = AutoTokenizer.from_pretrained("eugenesiow/bart-paraphrase")
+mod3 = AutoModelForSeq2SeqLM.from_pretrained("eugenesiow/bart-paraphrase")
+
+def paraphrase_3(sentence):
+    inputs = tok3(sentence, return_tensors="pt", max_length=256, truncation=True)
+    output = mod3.generate(inputs["input_ids"], attention_mask=inputs["attention_mask"], num_beams=5, max_length=256)
+    return tok3.decode(output[0], skip_special_tokens=True)
+
+# Εκτέλεση
+def run_pipeline(text, label):
+    print(f"Ανακατασκευή {label} ")
+    for sent in split_sentences(text):
+        print(f"Original: {sent}")
+        print(f"Vamsi:      {paraphrase_1(sent)}")
+        print(f"Ramsri:     {paraphrase_2(sent)}")
+        print(f"BART:       {paraphrase_3(sent)}")
+
+# Εκτέλεση
+run_pipeline(text1, "Text 1")
+run_pipeline(text2, "Text 2")
