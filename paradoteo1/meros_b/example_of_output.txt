@@ -1,17 +1,53 @@
-Original Sentence 1:
- Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives.
-Reconstructed (BART):
- Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives. Today is ourDragon Boat Festival. To celebrate it, go to your local dragon boat club. Go to dragonboatclub.com to find out how to go.
-Reconstructed (T5):
- Heute ist unser dragon boat festival, in unserer Chinese culture, um es mit allen schönen und sicheren in unseren Leben zu feiern.
-Reconstructed (PEGASUS):
- All images are copyrighted. 
+Ανακατασκευή Text 1 
+Original: Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives.
+Vamsi:      Today is our dragon boat festival in our Chinese culture to celebrate it with all safe and great in our lives.
+Ramsri:     Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives.
+BART:       Today is our dragon boat festival in Chinese culture, to celebrate it with all safe and great in our lives.
+Original: Hope you too, to enjoy it as my deepest wishes.
+Vamsi:      Hope you too, to enjoy it as my deepest wishes.
+Ramsri:     I hope you too, to enjoy it as my deepest wishes.
+BART:       Hope you too enjoy it as my deepest wishes.
+Original: Thank your message to show our words to the doctor, as his next contract checking, to all of us.
+Vamsi:      Thank you for your message to show our words to the doctor, as his next contract checking, to all of us.
+Ramsri:     Thank you for your message to show our words to the doctor, as his next contract checking, to all of us.
+BART:       Thank your message to show our words to the doctor as his next contract checking, to all of us.
+Original: I got this message to see the approved message.
+Vamsi:      I got this message to see the approved message .
+Ramsri:     I got this message to see the approved message.
+BART:       I got this message to see the approved message.
+Original: In fact, I have received the message from the professor, to show me, this, a couple of days ago.
+Vamsi:      In fact, a couple of days ago I received the message from the professor to show me this.
+Ramsri:     In fact, I have received the message from the professor, to show me, this, a couple of days ago.
+BART:       In fact, I have received the message from the professor to show me, this, a couple of days ago.
+Original: I am very appreciated the full support of the professor, for our Springer proceedings publication.
+Vamsi:      I am very grateful for the full support of the professor for our Springer proceedings publication .
+Ramsri:     I am very appreciated the full support of the professor, for our Springer proceedings publication.
+BART:       I am very grateful for the full support of the professor for our Springer proceedings publication.
+Ανακατασκευή Text 2 
+Original: During our final discuss, I told him about the new submission — the one we were waiting since last autumn,
+but the updates was confusing as it not included the full feedback from reviewer or maybe editor?
+Vamsi:      During our final discussion, I told him about the new submission — the one we were waiting for since last autumn , but the updates were confusing as it did not include the full feedback from reviewer or maybe editor?
+Ramsri:     During our final discuss, I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?
+BART:       During our final discuss, I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from the reviewer or maybe editor?
+Original: Anyway, I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation.
+Vamsi:      Anyway, I believe that the team, although a bit delayed and less communication in recent days, really tried for paper and cooperation best.
+Ramsri:     Anyway, I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation.
+BART:       Although bit delay and less communication at recent days, I believe the team really tried best for paper and cooperation.
+Original: We should be grateful, I mean all of us, for the acceptance and efforts until the Springer link came finally last week, I think.
+Vamsi:      We should be grateful, I mean all of us, for the acceptance and efforts until the Springer link finally came last week, I think .
+Ramsri:     We should be grateful, I mean all of us, for the acceptance and efforts until the Springer link came finally last week, I think.
+BART:       We should be grateful, I mean all of us, for acceptance and efforts until the Springer link came finally last week, I think.
+Original: Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before he sending again.
+Vamsi:      Please also remind me if the doctor still plan for the acknowledgments section edit before he sends again .
+Ramsri:     Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before he sending again.
+BART:       Also, kindly remind me if the doctor still plan for the acknowledgments section edit before he sends again.
+Original: Because I didn’t see that part final yet, or maybe I missed, I apologize if so.
+Vamsi:      Because I didn’t see that part final yet, or maybe I missed it, I apologize if so .
+Ramsri:     Because I didn't see that part final yet, or maybe I missed, I apologize if so.
+BART:       Because I didn't see that part final yet, or maybe I missed, I apologize if so.
+Original: Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future targets.
+Vamsi:      Let us make sure that all are safe and celebrate the outcome with strong coffee and future targets .
+Ramsri:     Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future targets.
+BART:       Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future targets.
 
-Original Sentence 2:
- During our final discuss, I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?
-Reconstructed (BART):
- "I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?" he said. "During our final discuss, I told him of the new Submission — theOne we were Waiting for since last Autumn, and he said, 'Yes, that's what I was looking for
-Reconstructed (T5):
- he was talking about the new submission — the one we were waiting since last autumn . During our final discuss, I told him about the new submission — but the updates were confusing as it not included the full feedback from reviewer or maybe editor?
-Reconstructed (PEGASUS):
- On the final day of the conference, I had a chance to talk to my friend and fellow conference speaker, the novelist and writer David Shrigley.
+Process finished with exit code 0
