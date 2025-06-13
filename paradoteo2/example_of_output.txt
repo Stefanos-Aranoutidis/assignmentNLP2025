@@ -1,0 +1,66 @@
+paraphrase_similarity_comparison.py:
+
+Semantic Similarity Scores for Text 1
+Sentence 1
+Original: Today is our dragon boat festival, in our Chinese culture, to celebrate it with all safe and great in our lives.
+Vamsi Similarity: 0.996
+Ramsri Similarity: 1.000
+BART Similarity: 0.997
+Sentence 2
+Original: Hope you too, to enjoy it as my deepest wishes.
+Vamsi Similarity: 1.000
+Ramsri Similarity: 0.975
+BART Similarity: 0.949
+Sentence 3
+Original: Thank your message to show our words to the doctor, as his next contract checking, to all of us.
+Vamsi Similarity: 0.994
+Ramsri Similarity: 0.994
+BART Similarity: 0.996
+Sentence 4
+Original: I got this message to see the approved message.
+Vamsi Similarity: 1.000
+Ramsri Similarity: 1.000
+BART Similarity: 1.000
+Sentence 5
+Original: In fact, I have received the message from the professor, to show me, this, a couple of days ago.
+Vamsi Similarity: 0.946
+Ramsri Similarity: 1.000
+BART Similarity: 0.996
+Sentence 6
+Original: I am very appreciated the full support of the professor, for our Springer proceedings publication.
+Vamsi Similarity: 0.966
+Ramsri Similarity: 1.000
+BART Similarity: 0.966
+Semantic Similarity Scores for Text 2
+Sentence 1
+Original: During our final discuss, I told him about the new submission — the one we were waiting since last autumn, but the updates was confusing as it not included the full feedback from reviewer or maybe editor?
+Vamsi Similarity: 0.985
+Ramsri Similarity: 1.000
+BART Similarity: 0.999
+Sentence 2
+Original: Anyway, I believe the team, although bit delay and less communication at recent days, they really tried best for paper and cooperation.
+Vamsi Similarity: 0.956
+Ramsri Similarity: 1.000
+BART Similarity: 0.893
+Sentence 3
+Original: We should be grateful, I mean all of us, for the acceptance and efforts until the Springer link came finally last week, I think.
+Vamsi Similarity: 0.999
+Ramsri Similarity: 1.000
+BART Similarity: 0.998
+Sentence 4
+Original: Also, kindly remind me please, if the doctor still plan for the acknowledgments section edit before he sending again.
+Vamsi Similarity: 0.980
+Ramsri Similarity: 1.000
+BART Similarity: 0.993
+Sentence 5
+Original: Because I didn’t see that part final yet, or maybe I missed, I apologize if so.
+Vamsi Similarity: 0.994
+Ramsri Similarity: 0.998
+BART Similarity: 0.998
+Sentence 6
+Original: Overall, let us make sure all are safe and celebrate the outcome with strong coffee and future targets.
+Vamsi Similarity: 0.975
+Ramsri Similarity: 1.000
+BART Similarity: 1.000
+
+Process finished with exit code 0
